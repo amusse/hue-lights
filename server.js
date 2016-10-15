@@ -72,7 +72,14 @@ function turnOnLights(color) {
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
-
+	 client.lights.getById(4)
+	  .then(light => {
+	  	light.hue = colors[color];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
 }
 
 function nightMode() {
