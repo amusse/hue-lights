@@ -2,19 +2,19 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var bunyan = require('bunyan');
-let huejay = require('huejay');
+var huejay = require('huejay');
 var bodyParser = require('body-parser');
 
-let bridgeId = '25CF16';
-let bridgeIP = '10.0.21.5';
+var bridgeId = '25CF16';
+var bridgeIP = '10.0.21.5';
 
-let client = new huejay.Client({
+var client = new huejay.Client({
   host:     bridgeIP,
   port: 	80,
   username: 'daDn5D2sqZYJbD0c7lI173FwpWd1iwOWqVxeT0VP'
 });
 
-let colors = {
+var colors = {
 	red: 0,
 	pink: 3000,
 	yellow: 11000,
