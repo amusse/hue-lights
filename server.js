@@ -52,6 +52,7 @@ function turnOnLights(color) {
 	  	light.hue = colors[color];
 	  	// light.hue = color;
 	  	light.brightness = 254;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -61,6 +62,7 @@ function turnOnLights(color) {
 	  	// light.hue = color;
 	  	light.brightness = 254;
 	    light.on = true;
+	    light.effect = 'none';
 	    return client.lights.save(light);
 	  });
 	client.lights.getById(3)
@@ -69,6 +71,7 @@ function turnOnLights(color) {
 	  	// light.hue = color;
 	  	light.brightness = 254;
 	    light.on = true;
+	    light.effect = 'none';
 	    return client.lights.save(light);
 	  });
 	 client.lights.getById(4)
@@ -77,6 +80,7 @@ function turnOnLights(color) {
 	  	// light.hue = color;
 	  	light.brightness = 254;
 	    light.on = true;
+	    light.effect = 'none';
 	    return client.lights.save(light);
 	  });
 }
@@ -96,6 +100,7 @@ function nightMode() {
 	  	light.hue = colors['yellow'];
 	  	// light.hue = color;
 	  	light.brightness = 70;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -104,6 +109,7 @@ function nightMode() {
 	  	light.hue = colors['yellow'];
 	  	// light.hue = color;
 	  	light.brightness = 70;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -112,6 +118,7 @@ function nightMode() {
 	  	light.hue = colors['yellow'];
 	  	// light.hue = color;
 	  	light.brightness = 70;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -132,6 +139,7 @@ function vikingsMode() {
 	  	light.hue = colors['purple'];
 	  	// light.hue = color;
 	  	light.brightness = 254;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -140,6 +148,7 @@ function vikingsMode() {
 	  	light.hue = colors['yellow'];
 	  	// light.hue = color;
 	  	light.brightness = 254;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -148,6 +157,7 @@ function vikingsMode() {
 	  	light.hue = colors['purple'];
 	  	// light.hue = color;
 	  	light.brightness = 254;
+	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -208,6 +218,7 @@ function giantsMode() {
 	  	// light.hue = color;
 	  	light.brightness = 254;
 	    light.on = true;
+	    light.effect = 'none';
 	    return client.lights.save(light);
 	  });
 	client.lights.getById(3)
@@ -216,6 +227,7 @@ function giantsMode() {
 	  	// light.hue = color;
 	  	light.brightness = 254;
 	    light.on = true;
+	    light.effect = 'none';
 	    return client.lights.save(light);
 	  });
 	client.lights.getById(4)
@@ -224,6 +236,7 @@ function giantsMode() {
 	  	// light.hue = color;
 	  	light.brightness = 254;
 	    light.on = true;
+	    light.effect = 'none';
 	    return client.lights.save(light);
 	  });
 }
