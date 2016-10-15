@@ -52,7 +52,6 @@ function turnOnLights(color) {
 	  	light.hue = colors[color];
 	  	// light.hue = color;
 	  	light.brightness = 254;
-	  	light.effect = 'none';
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
@@ -108,6 +107,125 @@ function nightMode() {
 	    light.on = true;
 	    return client.lights.save(light);
 	  });
+	client.lights.getById(4)
+	  .then(light => {
+	  	light.hue = colors['yellow'];
+	  	// light.hue = color;
+	  	light.brightness = 70;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+}
+
+function vikingsMode() {
+	client.lights.getById(1)
+	  .then(light => {
+	  	light.hue = colors['purple'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	  	light.effect = 'none';
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(2)
+	  .then(light => {
+	  	light.hue = colors['purple'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(3)
+	  .then(light => {
+	  	light.hue = colors['yellow'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(4)
+	  .then(light => {
+	  	light.hue = colors['purple'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+}
+
+function sexyMode() {
+	client.lights.getById(1)
+	  .then(light => {
+	  	light.hue = colors['purple'];
+	  	// light.hue = color;
+	  	light.brightness = 70;
+	  	light.effect = 'colorloop';
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(2)
+	  .then(light => {
+	  	light.hue = colors['red'];
+	  	// light.hue = color;
+	  	light.brightness = 70;
+	    light.on = true;
+	    light.effect = 'colorloop';
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(3)
+	  .then(light => {
+	  	light.hue = colors['pink'];
+	  	// light.hue = color;
+	  	light.brightness = 70;
+	    light.on = true;
+	    light.effect = 'colorloop';
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(4)
+	  .then(light => {
+	  	light.hue = colors['yellow'];
+	  	// light.hue = color;
+	  	light.brightness = 70;
+	    light.on = true;
+	    light.effect = 'colorloop';
+	    return client.lights.save(light);
+	  });
+}
+
+function giantsMode() {
+	client.lights.getById(1)
+	  .then(light => {
+	  	light.hue = colors['blue'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	  	light.effect = 'none';
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(2)
+	  .then(light => {
+	  	light.hue = colors['blue'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(3)
+	  .then(light => {
+	  	light.hue = colors['red'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
+	client.lights.getById(4)
+	  .then(light => {
+	  	light.hue = colors['blue'];
+	  	// light.hue = color;
+	  	light.brightness = 254;
+	    light.on = true;
+	    return client.lights.save(light);
+	  });
 }
 
 function setScene(mode) {
@@ -115,6 +233,14 @@ function setScene(mode) {
 		case 'night': 
 			nightMode();
 			break;
+		case 'vikings': 
+			vikingsMode();
+			break;
+		case 'giants':
+			giantsMode();
+			break;
+		case 'sexy':
+			sexyMode();
 		default:
 			turnOnLights(white);
 	}
