@@ -229,7 +229,8 @@ function giantsMode() {
 }
 
 function setScene(mode) {
-	switch (mode) {
+	logger.info({mode: mode}, 'Set mode');
+	switch (mode.trim()) {
 		case 'night': 
 			nightMode();
 			break;
@@ -242,13 +243,14 @@ function setScene(mode) {
 		case 'sexy':
 			sexyMode();
 		default:
-			turnOnLights(white);
+			turnOnLights(colors['white']);
 	}
 }
 
 router.post('/light/', function(req, res) {
 	var body = req.body;
 	var color = body.color;
+	logger.info({res: body}, 'Light request received');
 	if (color) {
 		turnOnLights(color);
 		logger.info({color: color}, 'Set light color');
@@ -260,6 +262,7 @@ router.post('/light/', function(req, res) {
 
 router.post('/light/scene', function(req, res) {
 	var body = req.body;
+	logger.info({res: body}, 'Scene request received');
 	var scene = body.scene;
 	if (scene) {
 		setScene(scene);
