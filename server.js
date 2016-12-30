@@ -5,13 +5,13 @@ var bunyan = require('bunyan');
 var huejay = require('huejay');
 var bodyParser = require('body-parser');
 
-var bridgeId = '25CF16';
-var bridgeIP = '10.0.21.5';
+var bridgeId = '';
+var bridgeIP = '';
 
 var client = new huejay.Client({
   host:     bridgeIP,
   port: 	80,
-  username: 'daDn5D2sqZYJbD0c7lI173FwpWd1iwOWqVxeT0VP'
+  username: ''
 });
 
 var colors = {
